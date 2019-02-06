@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test2">Test2</string>
+    <string-array name="Crop">
+        <item>Grapes</item>
+        <item>Grains</item>
+        <item>Strawberry</item>
+        <item>Straw</item>
+        <item>Peaches</item>
+        <item>Pulses</item>
+        <item>Coconut</item>
+        <item>Cotton</item>
+        <item>Corn</item>
+        <item>Tur</item>
+        <item>Millet</item>
+        <item>Mango</item>
+        <item>Soybean</item>
+        <item>Sugarcane</item>
+    </string-array>
+
+    <string name="SQUARE">
+        <![CDATA[<sup>x</sup>y]]>
+    </string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_calculator">Calculator</string>
+</resources>

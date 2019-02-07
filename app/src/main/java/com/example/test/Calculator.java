@@ -16,10 +16,9 @@ import android.widget.Toast;
 public class Calculator extends AppCompatActivity {
     public  static  int i=1;
     private static EditText tv;
-    private static Button cl1, cl2, cl3,cl4,cl5,cl6,cl7,cl8,cl9;
-    private static Button sum, diff, equal,mul,div,clear,square;
+    private static Button cl0,cl1, cl2, cl3,cl4,cl5,cl6,cl7,cl8,cl9,clpoint;
+    private static Button sum, diff, equal,mul,div,clear,square,squarert;
     public static boolean sw = false;
-    public static  double divide;
     public static String num1, num2;
     public static int choice = 0;
     public static double num3;
@@ -44,6 +43,8 @@ public class Calculator extends AppCompatActivity {
 
     public void calculator() {
         tv = (EditText) findViewById(R.id.textView7);
+        clpoint=(Button)findViewById(R.id.point);
+        cl0=(Button)findViewById(R.id.zero);
         cl1 = (Button) findViewById(R.id.one);
         cl2 = (Button) findViewById(R.id.two);
         cl3 = (Button) findViewById(R.id.three);
@@ -59,7 +60,54 @@ public class Calculator extends AppCompatActivity {
         div=(Button)findViewById(R.id.divide);
         clear=(Button)findViewById(R.id.AC);
         square=(Button)findViewById(R.id.square);
-        square.setText(Html.fromHtml(getResources().getString(R.string.SQUARE)));
+        square.setText("xⁿ" );
+        squarert=(Button)findViewById(R.id.squareroot);
+        squarert.setText("√x");
+        clpoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sw == false && choice == 0) {
+                    num1 = clpoint.getText().toString();
+                    tv.setText(num1);
+                    sw = true;
+                } else if (sw == true && choice == 0) {
+                    num1 = num1 + clpoint.getText().toString();
+                    tv.setText(num1);
+                } else if (!sw && (choice == 1 || choice == 2)) {
+                    num2 = clpoint.getText().toString();
+                    sw = true;
+                    tv.setText(num2);
+                } else
+                {
+                    num2 = num2 + clpoint.getText().toString();
+
+                    tv.setText(num2);
+                }
+            }
+        });
+
+        cl0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sw == false && choice == 0) {
+                    num1 = cl0.getText().toString();
+                    tv.setText(num1);
+                    sw = true;
+                } else if (sw == true && choice == 0) {
+                    num1 = num1 + cl0.getText().toString();
+                    tv.setText(num1);
+                } else if (!sw && (choice == 1 || choice == 2)) {
+                    num2 = cl0.getText().toString();
+                    sw = true;
+                    tv.setText(num2);
+                } else
+                {
+                    num2 = num2 + cl0.getText().toString();
+
+                    tv.setText(num2);
+                }
+            }
+        });
         cl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -286,6 +334,14 @@ public class Calculator extends AppCompatActivity {
                 sw = false;
             }
         });
+        squarert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                num3= Math.sqrt(Double.parseDouble(num1));
+                tv.setText(Double.toString(num3));
+            }
+        });
 
         equal = (Button)findViewById(R.id.equals);
         {
@@ -314,6 +370,7 @@ public class Calculator extends AppCompatActivity {
                         num3= Math.pow(Double.parseDouble(num1),Double.parseDouble(num2));
                         tv.setText(Double.toString(num3));
                      }
+
                     else
                     {
                         Toast.makeText(Calculator.this,"Error",Toast.LENGTH_LONG).show();

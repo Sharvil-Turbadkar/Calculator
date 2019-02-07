@@ -66,12 +66,35 @@
         android:text="7" />
 
     <Button
-        android:id="@+id/eight"
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="369dp"
+        android:background="@color/colorAccent"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="88dp"
+        android:layout_marginTop="369dp"
+        android:background="@color/colorAccent"
+        android:text="."
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="87dp"
         android:layout_marginTop="322dp"
         android:background="@color/colorAccent"
         android:text="8" />
@@ -83,7 +106,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="175dp"
-        android:layout_marginTop="322dp"
+        android:layout_marginTop="321dp"
         android:background="@color/colorAccent"
         android:text="9" />
 
@@ -150,7 +173,7 @@
     <Button
         android:id="@+id/multiply"
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
+        android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -187,6 +210,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="22dp"
+        android:background="@color/colorAccent"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/squareroot"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/colorAccent"
         android:textAlignment="center"
         android:textSize="18sp"

@@ -1,13 +1,13 @@
 #Calculator
-Basic Calulator that does Arithmetic  Calculations and Scientific Operations
+//Basic Calulator that does Arithmetic  Calculations and Scientific Operations
 
 ---
 #EMI Calcualtor
-To estimate by what time will you be able to pay your debt without going delinquent 
+//To estimate by what time will you be able to pay your debt without going delinquent 
 
 ---
 #Mortgage Calculator 
-To Caluclate Mortgage accrued over a period of time
+//To Caluclate Mortgage accrued over a period of time
 
 ---
 app--Refer to Java Files for Code
